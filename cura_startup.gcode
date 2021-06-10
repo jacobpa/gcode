@@ -5,9 +5,9 @@ M104 S150 									; Heat extruder, not so much that anything melts
 M190 S{material_bed_temperature_layer_0} 	; Wait for bed temp
 M109 S150 									; Wait for extruder Temp
 G28 										; Home all axes
-G29 A 										; Activate UBL mesh
 G29 L0 										; Load UBL Mesh 0
 G29 J3										; 3x3 Grid to tilt UBL mesh
+G29 A 										; Activate UBL mesh
 G1 Z25 F300 								; Move up before preheat to print temp
 G1 X0.1 Y20 F5000 							; Move to start position, not down yet
 
