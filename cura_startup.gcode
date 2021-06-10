@@ -13,6 +13,8 @@ G1 X0.1 Y20 F5000 							; Move to start position, not down yet
 
 M109 S{material_print_temperature_layer_0}  ; Warm extruder to starting print temp
 
+M300 P500                                   ; Beep for a half-second once temp reached
+G4 S5                                       ; Wait 5 seconds for me to wipe any crazy boogers that the wipe won't get
 G1 Z0.3 F300.0 								; Move down to start position
 G92 E0 										; Reset Extruder
 G1 Y200.0 E10 F1500.0  						; Draw the first line
