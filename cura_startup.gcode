@@ -22,4 +22,4 @@ G1 Y20 E10 F1500.0  						; Draw the second line
 G92 E0 										; Reset Extruder
 G1 Z2.0 F3000 								; Move Z Axis up little to prevent scratching of Heat Bed
 G1 X5 Z0.3 F5000.0 							; Move down and over to prevent blob squish
-M82 										; Extruder absolute mode, REQUIRED by Cura
+M82 										; Extruder absolute mode, Cura by default generates GCode in absolute
