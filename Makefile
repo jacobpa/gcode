@@ -14,7 +14,8 @@ out/startup_prusa.gcode: startup_template.gcode
 	sed -i '/M82/d' $@
 
 all: $(startup_files)
-
+cura: out/startup_cura.gcode
+prusa: out/startup_prusa.gcode
 clean:
 	@rm -r out
 
