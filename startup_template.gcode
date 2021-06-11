@@ -1,8 +1,8 @@
 ; Ender 3 V2 Custom Start G-code - UBL Mesh Tilt
 M83 										; Extruder relative mode, only for startup
-M140 S{material_bed_temperature_layer_0} 	; Set Bed temp for layer 0
+M140 S{BED_TEMP} 	; Set Bed temp for layer 0
 M104 S150 									; Heat extruder, not so much that anything melts
-M190 S{material_bed_temperature_layer_0} 	; Wait for bed temp
+M190 S{BED_TEMP} 	; Wait for bed temp
 M109 S150 									; Wait for extruder Temp
 G28 										; Home all axes
 G29 L0 										; Load UBL Mesh 0
@@ -11,7 +11,7 @@ G29 A 										; Activate UBL mesh
 G1 Z25 F300 								; Move up before preheat to print temp
 G1 X0.1 Y20 F5000 							; Move to start position, not down yet
 
-M109 S{material_print_temperature_layer_0}  ; Warm extruder to starting print temp
+M109 S{MATERIAL_TEMP}  ; Warm extruder to starting print temp
 
 M300 P500                                   ; Beep for a half-second once temp reached
 G4 S5                                       ; Wait 5 seconds for me to wipe any crazy boogers that the wipe won't get
